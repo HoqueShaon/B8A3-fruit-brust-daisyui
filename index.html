@@ -12,35 +12,385 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/833486cf00.js" crossorigin="anonymous"></script>
     <!-- talwind custom color -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: 'da373d',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
     <style>
-        .font-lato{
+        .font-lato {
             font-family: 'Lato', sans-serif;
         }
     </style>
 </head>
 
-<body>
-    <header>
+<body class="font-lato mt-10">
+    <header class="container mx-auto ">
+        <nav class="mb-12">
+            <div class="">
+                <div class="flex justify-between items-center py-6 bg-red-600 text-white rounded-full">
+                    <div class="">
+                        <div class="sm:dropdown w-15">
+                            <label tabindex="0" class=" lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h7" />
+                                </svg>
+                            </label>
+                            <ul tabindex="0" class="flex gap-3 items-center ml-12 sm:dropdown-content text-lg">
+                                <li><a>Home</a></li>
+                                <li><a>About Us</a></li>
+                                <li><a>Shop</a></li>
+                                <li><a>All Fruits</a></li>
+                            </ul>
 
+                        </div>
+                    </div>
+                    <div class="flex gap-2 justify-center items-center ">
+                        <img src="images/logo.png" alt="">
+                        <h1 class="text-2xl font-semibold">Fruit Burst</h1>
+                    </div>
+                    <div class="   rounded-full w-1/5 mx-7">
+                        <button class="btn btn-ghost btn-circle text-black bg-white w-10/12 justify-evenly">
+                            <p>Search Here</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main>
+    <main class="container mx-auto "">
+        <!-- exotic taste banner -->
+        <section >
+            <div class=" carousel w-full ">
+                <div id=" slide1" class="carousel-item relative w-full max-xl:">
+        <img src="/images/banner1.png" class="w-full brightness-50" />
+        <div
+            class="absolute flex justify-between   items-center transform -translate-y-1/2 left-5 right-5 top-1/2 text-white">
+            <a href="slide4" class="btn btn-circle text-white bg-black border-black text-center">❮</a>
+            <div class="block">
+                <h2 class="text-7xl my-5 font-extrabold text-center">Exotic tastes at your <br /> doorstep</h2>
+                <p class="text-xl my-6 mt-4 font-light text-center">We supply highly quality organic products</p>
+                <div class="mt-4 ml-20  mx-auto ">
+                    <button class="btn btn-error w-3/12 text-white items-center ml-20 mx-auto">Shop Now</button>
+                </div>
+            </div>
+            <a href="slide2" class="btn btn-circle  text-white bg-black border-black">❯</a>
+        </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full max-xl:">
+            <img src="/images/banner2.png" class="w-full brightness-50" />
+            <div
+                class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2  text-white ">
+                <a href="slide1" class="btn btn-circle  text-white bg-black border-black">❮</a>
+                <div class="block">
+                    <h2 class="text-7xl my-5 font-extrabold text-center">Exotic tastes at your <br /> doorstep</h2>
+                    <p class="text-xl my-6 mt-4 font-light text-center">We supply highly quality organic products</p>
+                    <div class="mt-4 ml-20  mx-auto ">
+                        <button class="btn btn-error w-3/12 text-white items-center ml-20 mx-auto">Shop Now</button>
+                    </div>
+                </div>
+                <a href="slide3" class="btn btn-circle  text-white bg-black border-black">❯</a>
+            </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full max-xl:">
+            <img src="/images/banner3.png" class="w-full brightness-50" />
+            <div
+                class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2  text-white">
+                <a href="slide2" class="btn btn-circle  text-white bg-black border-black">❮</a>
+                <div class="block">
+                    <h2 class="text-7xl my-5 font-extrabold text-center">Exotic tastes at your <br /> doorstep</h2>
+                    <p class="text-xl my-6 mt-4 font-light text-center">We supply highly quality organic products</p>
+                    <div class="mt-4 ml-20  mx-auto ">
+                        <button class="btn btn-error w-3/12 text-white items-center ml-20 mx-auto">Shop Now</button>
+                    </div>
+                </div>
+                <a href="slide4" class="btn btn-circle  text-white bg-black border-black">❯</a>
+            </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full max-xl:">
+            <img src="/images/banner4.png" class="w-full brightness-50" />
+            <div
+                class="absolute flex justify-between items-center transform -translate-y-1/2 left-5 right-5 top-1/2  text-white">
+                <a href="slide3" class="btn btn-circle  text-white bg-black border-black">❮</a>
+                <div class="block">
+                    <h2 class="text-7xl my-5 font-extrabold text-center">Exotic tastes at your <br /> doorstep</h2>
+                    <p class="text-xl my-6 mt-4 font-light text-center">We supply highly quality organic products</p>
+                    <div class="mt-4 ml-20  mx-auto ">
+                        <button class="btn btn-error w-3/12 text-white items-center ml-20 mx-auto">Shop Now</button>
+                    </div>
+                </div>
+                <a href="slide1" class="btn btn-circle  text-white bg-black border-black">❯</a>
+            </div>
+        </div>
+        </div>
+        <!-- <div class="flex justify-center "> -->
+        <div
+            class="grid  grid-cols-5 sm:grid-col-1 justify-between text-center  w-3/4 bg-white relative lg:-mt-20 mt-32 rounded-xl mx-auto shadow-lg">
+            <div class="flex flex-col justify-end items-center ">
+                <img class="w-fit" src="./images/fruit1.png" alt="" />
+                <h3 class="text-xl font-medium mt-4">Globe Grape</h3>
+            </div>
+            <div class="flex flex-col justify-end items-center ">
+                <img class="w-fit" src="./images/fruit2.png" alt="" />
+                <h3 class="text-xl font-medium mt-4">Globe Grape</h3>
+            </div>
+            <div class="flex flex-col justify-end items-center  ">
+                <img class="w-fit" src="./images/fruit3.png" alt="" />
+                <h3 class="text-xl font-medium mt-4">Globe Grape</h3>
+            </div>
+            <div class="flex flex-col justify-end items-center  ">
+                <img class="w-fit" src="./images/fruit4.png" alt="" />
+                <h3 class="text-xl font-medium mt-4">Globe Grape</h3>
+            </div>
+            <div class="flex flex-col justify-end items-center  ">
+                <img class="w-fit" src="./images/fruit5.png" alt="" />
+                <h3 class="text-xl font-medium mt-4">Globe Grape</h3>
+            </div>
+        </div>
+        <!-- </div> -->
+        </section>
+        <!-- day section -->
+        <section class="my-20">
+            <div class="  px-4 flex justify-between ">
+                <div class="w-1/2  text-left ">
+                    <h1 class="text-3xl font-bold  mb-5">Deal Of the Day</h1>
+                    <p class="text-base font-light">Contrary to popular belief, is not simply random text. It has roots
+                        in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div class="flex flex-col">
+                    <span class="countdown font-extrabold text-2xl space-x-20 "><span style="--value: 29 "></span><i
+                            class="fa-solid fa-ellipsis-vertical"></i></span>
+                    <span></span>
+                    Days
+                </div>
+                <div class="flex flex-col">
+                    <span class="countdown font-extrabold text-2xl space-x-20  "><span style="--value: 29 "></span><i
+                            class="fa-solid fa-ellipsis-vertical"></i></span>
+                    <span></span>
+                    Hours
+                </div>
+                <div class="flex flex-col">
 
+                    <span class="countdown font-extrabold text-2xl space-x-20"><span style="--value: 29 "></span><i
+                            class="fa-solid fa-ellipsis-vertical"></i></span>
+
+                    Minutes
+                </div>
+                <div class="flex flex-col">
+                    <span class="countdown font-extrabold text-2xl "><span style="--value: 08"></span></span>
+                    Seconds
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="my-20">
+            <div class="grid gap-11 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-2">
+                <!-- first review    -->
+                <div class="card  border border-gray-300 p-9">
+                    <figure><img class="" src="/images/fruit9.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h4 class="text-center text-xl font-extrabold mb-1">12.90$ - 18.85$</h4>
+                        <h7 class="text-center">Appless</h7>
+                        <hr class="border-1	">
+                        <div class="rating justify-center">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div class=" text-center space-y-4 mt-4">
+                            <p class="text-red-600">Details</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd review    -->
+                <div class="card  border border-gray-300 p-9">
+                    <figure><img class="" src="/images/fruit9.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h4 class="text-center text-xl font-extrabold mb-1">12.90$ - 18.85$</h4>
+                        <hr class="border-1	">
+                        <h7 class="text-center">Appless</h7>
+                        <div class="rating justify-center">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div class=" text-center space-y-4 mt-4">
+                            <p class="text-red-600">Details</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2nd review    -->
+                <div class="card  border border-gray-300 p-9">
+                    <figure><img class="" src="/images/fruit9.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h4 class="text-center text-xl font-extrabold mb-1">12.90$ - 18.85$</h4>
+                        <h7 class="text-center">Appless</h7>
+                        <hr class="border-1	">
+                        <div class="rating justify-center">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div class=" text-center space-y-4 mt-4">
+                            <p class="text-red-600">Details</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card  border border-gray-300 p-9">
+                    <figure><img class="" src="/images/fruit9.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h4 class="text-center text-xl font-extrabold mb-1">12.90$ - 18.85$</h4>
+                        <h7 class="text-center">Appless</h7>
+                        <hr class="border-1	">
+                        <div class="rating justify-center">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div class=" text-center space-y-4 mt-4">
+                            <p class="text-red-600">Details</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="min-h flex items-center justify-center">
+                <button class="btn btn-error">Shop All</button>
+            </div>
+        </section>
+        <!-- meet -->
+        <section class="my-20">
+            <div class="hero min-h-screen" style="background-image: url(images/team.png);">
+                <div class="hero-overlay shadow-black"></div>
+                <div class="hero-content  text-neutral-content grid grid-cols-1">
+                    <div class="max-w ">
+                        <h1 class="mb-5 text-center text-5xl font-bold">Meet the team section</h1>
+                        <p class="mb-5 min-w-min">Contrary to popular belief, is not simply random text. It has roots in
+                            a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p><br>
+                    </div>
+                    <div class="grid grid-cols-4">
+                        <div class="card text-white">
+                            <figure class="px-10 pt-10">
+                                <img src="./images/member4.png" alt="member" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center justify-center">
+                                <h2 class="card-title">Chaity</h2>
+                                <p class="py-2 block">Fruits Expert</p>
+                                <div class="card-actions">
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-twitter"></i></a>
+                                    <a href=""><i  class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card text-white">
+                            <figure class="px-10 pt-10">
+                                <img src="./images/member4.png" alt="member" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center justify-center">
+                                <h2 class="card-title">Chaity</h2>
+                                <p class="py-2 block">Fruits Expert</p>
+                                <div class="card-actions">
+                                    <a href=""><i class=" bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-twitter"></i></a>
+                                    <a href=""><i  class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card text-white">
+                            <figure class="px-10 pt-10">
+                                <img src="./images/member4.png" alt="member" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center justify-center">
+                                <h2 class="card-title">Chaity</h2>
+                                <p class="py-2 block">Fruits Expert</p>
+                                <div class="card-actions">
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-twitter"></i></a>
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card text-white">
+                            <figure class="px-10 pt-10">
+                                <img src="./images/member4.png" alt="member" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center justify-center">
+                                <h2 class="card-title">Chaity</h2>
+                                <p class="py-2 block">Fruits Expert</p>
+                                <div class="card-actions">
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-facebook-f"></i></a>
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-twitter"></i></a>
+                                    <a href=""><i class="bg-red-500 w-6 h-6 flex justify-center items-center rounded-full fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
     </main>
-    <footer>
-        
-    </footer>
+    <footer class="footer footer-center py-24 px-7 bg-[#121212] text-white">
+        <div class="">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+        <div class="grid grid-flow-col gap-9 ">
+          <a href="#" class="link link-hover">Home</a>
+          <a href="#" class="link link-hover">About Us</a>
+          <a href="#" class="link link-hover">Shop</a>
+          <a href="#" class="link link-hover">All Fruits</a>
+          <a href="#" class="link link-hover">Support</a>
+          <a href="#" class="link link-hover">My Account</a>
+        </div>
+        <div>
+          <div class="grid grid-flow-col gap-3 lg:gap-10 items-center">
+            <a href="#"
+              ><img src="./images/icon/twitter1.png" alt="social icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/icon/facebook1.png" alt="social icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/icon/youtube.png" alt="social icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/icon/linkedin1.png" alt="social icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/icon/instagram1.png" alt="social icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/icon/apple1.png" alt="social icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
 
 </body>
 
